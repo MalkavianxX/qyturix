@@ -9,7 +9,7 @@ def view_consultas(request):
 
 
 
-def check_user_email(key, email):
+def check_user_email(request, key, email):
     if key is not None:
         if email is not None:
             if CustomUser.objects.filter(email=email).exists():
@@ -20,6 +20,7 @@ def check_user_email(key, email):
             return JsonResponse({"error": "Email not provided"}, status=400)
     else:
         return JsonResponse({"error": "Key not provided"}, status=400)
+
 
 @require_http_methods(["GET"])
 def check_username(request):

@@ -9,10 +9,8 @@ def view_consultas(request):
 
 
 
-def check_user_email(key,email,nones):
-    key = key
+def check_user_email(key, email):
     if key is not None:
-        email = email
         if email is not None:
             if CustomUser.objects.filter(email=email).exists():
                 return JsonResponse({"exists": True}, status=200)

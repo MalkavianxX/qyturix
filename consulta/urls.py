@@ -11,7 +11,7 @@ urlpatterns = [
 
 
     #json APÍS
-    path('check_user_email/<str:key>/<str:email>/<str:nones>/',views.check_user_email, name="check_user_email"),
+    path('check_user_email/<str:key>/<str:email>/',views.check_user_email, name="check_user_email"),
 
 ]
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

@@ -1,10 +1,11 @@
 from django.http import JsonResponse
+from django.shortcuts import render
 from django.views.decorators.http import require_http_methods
 from login.models import CustomUser
 
 def view_consultas(request):
 
-    return (request, 'consulta/index.html')
+    return render(request, 'consulta/index.html')
 
 
 @require_http_methods(["GET"])

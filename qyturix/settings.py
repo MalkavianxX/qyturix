@@ -90,7 +90,7 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'qyturix.wsgi.application'
-CSRF_TRUSTED_ORIGINS = ['https://turixcam.com']
+CSRF_TRUSTED_ORIGINS = ['https://turixcam.com','https://licenver.cloud','http://licenver.cloud','http://turixcam.com']
 
 
 # Database

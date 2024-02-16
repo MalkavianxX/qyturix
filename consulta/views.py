@@ -8,7 +8,7 @@ def view_consultas(request):
     return render(request, 'consulta/index.html')
 
 
-@require_http_methods(["GET"])
+
 def check_user_email(key,email,nones):
     key = key
     if key is not None:
